@@ -1,0 +1,249 @@
+/* Global Styling */
+body {
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+    background: url('2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #f4f4f4;
+    overflow-x: hidden;
+}
+
+/* Container Styling */
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.85);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
+    position: relative;
+    z-index: 1;
+    transition: all 0.4s ease;
+}
+
+.container:hover {
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.9);
+}
+
+/* Photo Container */
+.photo-container {
+    text-align: center;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.photo-container img {
+    border-radius: 50%;
+    border: 5px solid #f2b632;
+    width: 170px;
+    height: 170px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
+    transition: transform 0.4s ease;
+}
+
+.photo-container:hover img {
+    transform: scale(1.1);
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+header h1 {
+    font-size: 2.8em;
+    color: #f2b632;
+    font-family: 'Quicksand', sans-serif;
+    text-transform: uppercase;
+    margin-top: 20px;
+}
+
+.tagline {
+    font-style: italic;
+    color: #f2f2f2;
+    font-size: 1.4em;
+    transition: color 0.3s ease-in-out;
+}
+
+.tagline:hover {
+    color: #e09e2d;
+}
+
+/* Card Styling for Sections */
+.card {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    margin-bottom: 50px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-12px);
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+/* Button Styling */
+button {
+    padding: 12px 25px;
+    background-color: #f2b632;
+    color: #333;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.4s ease, transform 0.4s ease;
+}
+
+button:hover {
+    background-color: #e09e2d;
+    transform: scale(1.05);
+}
+
+/* Section Title Styling */
+h2 {
+    color: #f2b632;
+    font-family: 'Quicksand', sans-serif;
+    text-transform: uppercase;
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    position: relative;
+    display: inline-block;
+}
+
+h2::after {
+    content: '';
+    display: block;
+    width: 50%;
+    height: 2px;
+    background: #f2b632;
+    margin: 8px auto;
+    transition: width 0.3s ease;
+}
+
+h2:hover::after {
+    width: 100%;
+}
+
+/* Scroll Animations */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.container,
+.card {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+/* Hobbies and Education Sections */
+#hobbies ul, #education ul {
+    list-style-type: square;
+    padding-left: 20px;
+}
+
+#hobbies li, #education li {
+    margin-bottom: 10px;
+    color: #f2f2f2;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+}
+
+#hobbies li:hover, #education li:hover {
+    color: #f2b632;
+}
+
+/* Adding icons for hobbies and education */
+#hobbies li::before {
+    content: '🎨';
+    margin-right: 10px;
+}
+
+#education li::before {
+    content: '🎓';
+    margin-right: 10px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    #hobbies li, #education li {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    #hobbies li, #education li {
+        font-size: 0.9em;
+    }
+}
+
+
+/* Mobile-Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 20px;
+    }
+
+    header h1 {
+        font-size: 2.4em;
+    }
+
+    .photo-container img {
+        width: 140px;
+        height: 140px;
+    }
+
+    .tagline {
+        font-size: 1.2em;
+    }
+
+    .card {
+        padding: 20px;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 15px;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    .photo-container img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .tagline {
+        font-size: 1em;
+    }
+
+    .card {
+        padding: 15px;
+        margin-bottom: 25px;
+    }
+
+    footer {
+        font-size: 0.9em;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+}
